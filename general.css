@@ -41,7 +41,7 @@ img {
     display: flex;
 
     width: 60%;
-    height: fit-content;
+    height: min-content;
     margin: 0 20px;
 }
 
@@ -283,15 +283,5 @@ footer {
 
     .cookie {
         width: 25px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    img {
-        width: 100%;
-    }
-
-    .squareImg {
-        width: 100%;
     }
 }
