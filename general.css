@@ -50,7 +50,7 @@ img {
 }
 
 main {
-    padding: 10rem 0;
+    height: 70vh;
     width: 70%;
     margin: auto;
     
@@ -260,10 +260,8 @@ footer {
 
 .mainOutsideMain {
     margin: auto;
-    margin-bottom: 20px;
 
     border-top: 1px solid var(--main-color-1);
-    border-bottom: 1px solid var(--main-color-1);
 }
 
 
@@ -277,7 +275,7 @@ footer {
 }
 
 #postMainText {
-    margin-bottom: 2rem;
+    padding-bottom: 3rem;
 }
 
 
@@ -331,6 +329,12 @@ footer {
 }
 
 @media screen and (max-width: 650px) {
+
+    main {
+        width: 100%;
+        border: none;
+        height: 60vh;
+    }
 
     body {
         font-size: 0.8rem;

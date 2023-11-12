@@ -9,6 +9,14 @@
 </head>
 
 <body class="noScrollbar">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1/lib/p5.min.js"></script>
+    <script src="jsFiles/main.js"></script>
+    <script id="script" src="jsFiles/screenSaver.js"></script>
+    <script id="script" src="jsFiles/flowField.js"></script>
+    <script id="script" src="jsFiles/blackHole.js"></script>
+    <script id="script" src="jsFiles/backgroundGenerator.js"></script>
+
+
     <header>
         <div class="headerInHeader">
             <div class="headerInHeader">
@@ -23,7 +31,7 @@
     <div class="sideCategoryLinks">
         <div>
             <a href="#games" class="textLink sideLink">GAMES</a>
-            <a href="#generativeart" class="textLink sideLink">GENERATIVE ART</a>
+            <a href="#generativeart" class="textLink sideLink"> GENERATIVE ART </a>
             <a href="#pixelart" class="textLink sideLink">PIXELART</a>
         </div>
     </div>
@@ -99,47 +107,26 @@
             <div class="anchor" id="generativeart"></div>
             <div class="category">
                 <div class="categoryMargin">
-                    <div class="categoryTitle"> GENERATIVE ART </div>
-                    <div class="categoryText">
-                        Adaptative Flow Field :
-                        <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos expedita a placeat,
-                        voluptatum
-                        dolorem eaque incidunt labore suscipit praesentium rerum quia. Libero iusto repellat, excepturi
-                        quis voluptate autem consectetur exercitationem.
-                        <br><br> <img class="squareImg" src="images/AdaptativeFlowFieldCanvas.png" alt="Flow Field">
-                    </div>
-                    <div class="categoryText alignRightWhenBig">
-                        Automated blurred backgrounds :
-                        <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos expedita a placeat,
-                        voluptatum
-                        dolorem eaque incidunt labore suscipit praesentium rerum quia. Libero iusto repellat, excepturi
-                        quis voluptate autem consectetur exercitationem.
-                        <br><br> <img class="squareImg" src="images/BlurredNoisyBackground.png"
-                            alt="Blurred noisy background">
-                    </div>
-                </div>
-                <div style="margin-bottom: 30px;" class="categoryMargin"> TRY IT OUT HERE</div>
-                <div class="preMainChoice">
-                    <div class="preMainChoiceElement otherLink textLink"> blackhole</div>
-                    <div class="preMainChoiceElement otherLink textLink"> flow field </div>
-                    <div class="preMainChoiceElement otherLink textLink"> screensaver </div>
-                    <div class="preMainChoiceElement otherLink textLink"> background generator </div>
-                </div>
-                <div class="mainOutsideMain">
-                    <main>
-
-                    </main>
-                </div>
-                <div class="categoryMargin">
-
-                    <div id="postMainTitle"> BLACK HOLE SIMULATION </div>
-                    <div class="categoryMargin" id="postMainText">
+                    <div style="margin-bottom: 30px;" class="categoryTitle"> TRY IT OUT HERE</div>
+                    <div id="postMainTitle"> SCREEN SAVER </div>
+                    <div class="categoryText" id="postMainText">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos expedita a placeat,
                         voluptatum
                         <br><br> dolorem eaque incidunt labore suscipit praesentium rerum quia. Libero iusto repellat,
                         excepturi
                         quis voluptate autem consectetur exercitationem.
                     </div>
+                </div>
+                <div class="preMainChoice">
+                    <div onclick="who = 'screenSaver'; background(0); setupSS()" class="preMainChoiceElement otherLink textLink"> screensaver </div>
+                    <div onclick="who = 'backgroundGenerator'; background(0); setupBG()" class="preMainChoiceElement otherLink textLink"> background generator </div>
+                    <div onclick="who = 'flowField'; background(0); setupFF()" class="preMainChoiceElement otherLink textLink"> flow field </div>
+                    <div onclick="who = 'blackHole'; background(0); setupBH()" class="preMainChoiceElement otherLink textLink"> blackhole</div>
+                </div>
+                <div class="mainOutsideMain">
+                    <main id="main">
+
+                    </main>
                 </div>
             </div>
 
