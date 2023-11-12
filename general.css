@@ -189,7 +189,7 @@ footer {
 
 .anchor {
     position: relative;
-    top: -70px;
+    top: -69px;
 }
 
 /* actual content */
@@ -205,6 +205,7 @@ footer {
 
 .category:first-child {
     padding-top: 120px;
+    border-bottom: 0;
 }
 
 .category:last-child {
@@ -370,6 +371,14 @@ footer {
 
 @media screen and (max-width: 450px) {
     
+    .titleElement:first-child span {
+        display: none;
+    }
+
+    .titleElement:first-child::after {
+        content: "JUSTIN'S FOLIO";
+    }
+
     .titleElement:last-child {
         display: none;
     }
