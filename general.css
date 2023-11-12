@@ -41,7 +41,7 @@ img {
     display: flex;
 
     width: 60%;
-    height: min-content;
+    height: auto;
     margin: 0 20px;
 }
 
