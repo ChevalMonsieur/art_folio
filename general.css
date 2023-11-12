@@ -10,7 +10,7 @@
 
 html {
 	scroll-behavior: smooth;
-    cursor: url(/images/customCursor.png) 7 7, pointer;
+    cursor: url(/Art/images/customCursor.png) 7 7, pointer;
 }
 
 body {
@@ -171,7 +171,7 @@ footer {
 .textLink {
     color: var(--main-color-1);
     transition: color 0.2s ease-in-out;
-    cursor: url(/images/customCursorLink.png), pointer;
+    cursor: url(/Art/images/customCursorLink.png), pointer;
 
 }
 
