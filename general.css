@@ -37,6 +37,10 @@ header {
     border-bottom: 1px solid var(--main-color-1);
 }
 
+a {
+    text-decoration: none !important;
+}
+
 img {
     display: flex;
 
@@ -45,12 +49,15 @@ img {
     margin: 0 20px;
 }
 
-/*img:hover {
+/* img:hover {
     filter: brightness(65%);
     -webkit-filter: brightness(65%);
-}*/
+    z-index: -1;
+} */
 
 footer {
+    margin-top: 20px;
+    border-top: 1px solid var(--main-color-1);
     padding: 10px;
 
     font-size: 1rem;
@@ -60,14 +67,21 @@ footer {
 /* CLASSES */
 /***********/
 
-/* line decoration */
+/* around content */
 
-.headerTitle {
+.headerTitleBar {
+    display: flex;
+    justify-content: space-between;
+
     margin: auto;
     width: -webkit-calc(100% - 30px);
     width:    -moz-calc(100% - 30px);
     width:         calc(100% - 30px);
     font-size: 1.5rem;
+}
+
+.titleElement {
+    margin: 0;
 }
 
 .headerInHeader {
@@ -87,6 +101,12 @@ footer {
     border-bottom: 1px solid var(--main-color-1);
 }
 
+.styleColouring {
+    position: fixed;
+    
+    background-color: var(--main-color-1);
+}
+
 .bodyInBody {
     width: -webkit-calc(100% - 80px);
     width:         calc(100% - 80px);
@@ -102,6 +122,15 @@ footer {
     width:         calc(100% - 40px);
 }
 
+.noScrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.noScrollbar::-webkit-scrollbar {
+    display: none;
+}
+
 /* links */
 
 .sideCategoryLinks {
@@ -109,8 +138,17 @@ footer {
     top: 70px;
     left: 5px;
 
+    text-decoration: underline;
     writing-mode: vertical-lr;
     rotate: 180deg;
+}
+
+.sideTopLink {
+    top: 70px;
+    padding-top: 10px;
+    padding-right: 3px;
+
+    text-decoration: none !important;
 }
 
 .sideContactLinks {
@@ -118,11 +156,16 @@ footer {
     bottom: 0;
     right: 5px;
 
+    text-decoration: underline;
     writing-mode: vertical-lr;
 }
 
 .sideLink {
     padding-bottom: 20px;
+}
+
+.otherLink {
+    text-decoration: underline !important;
 }
 
 .textLink {
@@ -146,7 +189,6 @@ footer {
 .category {
     margin: auto;
     padding-top: 60px;
-    padding-bottom: 30px;
 
     border-bottom: 1px solid var(--main-color-1);
 }
@@ -167,7 +209,7 @@ footer {
 .categoryText {
     margin-left: 2rem;
     display: flex;
-    padding-bottom: 2rem;
+    padding-bottom: 5rem;
 }
 
 .alignRightWhenBig {
@@ -189,19 +231,9 @@ footer {
 
 
 
-/* removing scrollbar */
-
-.noScrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.noScrollbar::-webkit-scrollbar {
-    display: none;
-}
-
-
+/*****************/
 /* MEDIA QUERIES */
+/*****************/
 
 @media screen and (max-width: 1000px) {
 
@@ -283,5 +315,12 @@ footer {
 
     .cookie {
         width: 25px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    
+    .titleElement:last-child {
+        display: none;
     }
 }
