@@ -13,9 +13,9 @@ body {
     font-size: 1.2rem;
 
     --main-color-1: rgb(255, 255, 215);
-    --main-color-1-var: rgb(255, 255, 170);
+    --main-color-1-var: rgb(193, 193, 163);
     --main-color-2: rgb(5, 35, 35);
-    --main-color-2-var: rgb(10, 48, 48);
+    --main-color-2-var: rgb(255, 255, 255);
 
     background-color: var(--main-color-2);
     color: var(--main-color-1);
@@ -28,79 +28,31 @@ header {
     top: 0;
 
     width: 100%;
+    padding: 10px;
 
     border-bottom: 1px solid var(--main-color-1);
+    background-color: var(--main-color-2);
 }
 
 /***********/
 /* CLASSES */
 /***********/
 
-/* line decoration */
-
-.headerTitle {
-    margin: auto;
-    width: -webkit-calc(100% - 30px);
-    width:    -moz-calc(100% - 30px);
-    width:         calc(100% - 30px);
-    font-size: 1.5rem;
-}
-
-.headerInHeader {
-    padding-bottom: 15px;
-    width: -webkit-calc(100% - 120px);
-    width:    -moz-calc(100% - 120px);
-    width:         calc(100% - 120px);
-    margin: auto;
-
-    background-color: var(--main-color-2);
-}
-
-.headerInHeader .headerInHeader {
-    width: 100%;
-    padding-top: 10px;
-
-    border-bottom: 1px solid var(--main-color-1);
-}
-
-.bodyInBody {
-    width: -webkit-calc(100% - 80px);
-    width:    -moz-calc(100% - 80px);
-    width:         calc(100% - 80px);
+.headerLine {
+    display: flex;
 
     margin: auto;
-
-    border-left: 1px solid var(--main-color-1);
-    border-right: 1px solid var(--main-color-1);
+    width: 95%;
 }
 
-.bodyInBody .bodyInBody {
-    width: -webkit-calc(100% - 40px);
-    width:    -moz-calc(100% - 40px);
-    width:         calc(100% - 40px);
+.headerLinks {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
 }
 
-/* links */
-
-.sideCategoryLinks {
-    position: fixed;
-    top: 70px;
-    left: 6px;
-
-    writing-mode: vertical-lr;
-    rotate: 180deg;
-}
-
-.sideContactLinks {
-    position: fixed;
-    bottom: 0;
-    right: 6px;
-
-    writing-mode: vertical-lr;
-}
-
-.sideLink {
-    padding-bottom: 20px;
+.headerLink {
+    margin-left: 3rem;
 }
 
 .textLink {
@@ -112,19 +64,23 @@ header {
     color: var(--main-color-1-var);
 }
 
+.bodyInBody {
+    margin: auto;
+    width: 95%;
+    border-left: 1px solid var(--main-color-1);
+    border-right: 1px solid var(--main-color-1);
+}
+
+.bodyInBody .bodyInBody {
+    width: 97%;
+}
+
+
+
 /* actual content */
 
 .category {
-    margin: auto;
-    padding-top: 120px;
-    padding-bottom: 30px;
-
-    border-bottom: 1px solid var(--main-color-1);
-    background-color: var(--main-color-2);
-}
-
-.categoryMargin {
-    margin: 0 30px;
+    margin: 4rem 2rem;
 }
 
 .categoryTitle {
@@ -132,19 +88,15 @@ header {
     margin-bottom: 1rem;
 }
 
-.categoryText {
-    margin-left: 2rem;
-}
 
 
+/* remove scrollbar */
 
-/* removing scrollbar */
-
-.noScrollbar {
+.example {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
-.noScrollbar::-webkit-scrollbar {
+.example::-webkit-scrollbar {
     display: none;
 }
