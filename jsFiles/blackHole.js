@@ -1,7 +1,7 @@
 function setupBH() {
     BHpoints = []
     BHspirals = []
-    BHnbPoints = 5000
+    BHnbPoints = 2000
     BHnbSpirals = 2
     BHoffsetRotation = 0.3
     BHstrength = 100
