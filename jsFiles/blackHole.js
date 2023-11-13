@@ -25,10 +25,8 @@ function drawBH() {
             if (BHdistanceFromSpiral < BHstrength / 5 && random(1) < 0.05) {
                 BHp.x = random(width)
                 BHp.y = random(height)
-            } else if (BHp.x < 0) BHp.x = width
-            else if (BHp.x > width) BHp.x = 0
-            else if (BHp.y < 0) BHp.y = height
-            else if (BHp.y > height) BHp.y = 0
+            } 
+            else if (BHp.x < 0 || BHp.x > width || BHp.y < 0 || BHp.y > height) BHp.x = random(width), BHp.y = random(height)
             else {
                 BHspeed = 1 / BHdistanceFromSpiral * BHstrength / 4
                 BHparallelVectorFromSpiral = BHp.copy().sub(BHs).rotate(PI / 2 + BHoffsetRotation).normalize().mult(BHspeed)

@@ -1,5 +1,5 @@
 function setupFF() {
-    FFpoints = [], FFnbPoints = 5000, FFopacity = 100, FFspeed = 50, FFpositionScale = 10000, FFnoiseScale = 200, FFfade = 15;
+    FFpoints = [], FFnbPoints = 2000, FFopacity = 100, FFspeed = 50, FFpositionScale = 10000, FFnoiseScale = 200, FFfade = 15;
 
     noiseSeed(random(1000));
     background(0);

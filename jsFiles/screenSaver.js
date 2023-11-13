@@ -6,7 +6,7 @@ function setupSS() {
     offsetNoise = 0.000001;
     totalOffsetNoise = 0;
     offsetRotation = 0.000004;
-    totalOffsetRotation = 0;
+    totalOffsetRotation = 3;
 
     noiseSeed(random(1000));
 }
